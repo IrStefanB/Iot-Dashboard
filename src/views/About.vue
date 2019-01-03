@@ -1,5 +1,17 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <q-page padding class="bg-blue-grey-10 text-white">
+    <hello-world />
+  </q-page>
 </template>
+
+
+<script>
+import HelloWorld from "@/components/HelloWorld.vue"; 
+
+export default {
+  name: "PageAbout",
+  components: { 
+    HelloWorld 
+  }
+};
+</script>

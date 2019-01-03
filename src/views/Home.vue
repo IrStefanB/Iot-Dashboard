@@ -1,18 +1,21 @@
 <template>
-  <div class="home">
-    <img src="../assets/logo.png">
-    <LightSensor />
-  </div>
+  <q-page class="flex flex-center bg-blue-grey-10 text-white">
+    <!-- <img alt="Quasar logo" src="../assets/logo.png"> -->
+    <keep-alive>
+      <LightSensor />
+    </keep-alive>
+  </q-page>
 </template>
 
-<script>
-// @ is an alias to /src
-import LightSensor from "@/components/LightSensor.vue";
+<style>
+</style>
 
+<script>
+import LightSensor from "@/components/LightSensor.vue"; 
 export default {
-  name: "home",
-  components: {
-    LightSensor
+  name: "PageHome",
+  components: { 
+    LightSensor 
   }
 };
 </script>
