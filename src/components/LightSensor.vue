@@ -1,17 +1,17 @@
 <template>
   <q-card inline style="width: 500px;background:rgb(44, 62, 80)">
     <q-card-media>
-      	<img style="max-width:200px;margin:auto" src="../assets/bulb.png">
+      <img style="max-width:200px;margin:auto" src="../assets/bulb.png" />
     </q-card-media>
-	<q-card-separator style="height:2px"/>
+    <q-card-separator style="height:2px" />
     <q-card-title>
-    	Office
+      Office
     </q-card-title>
     <q-card-main>
-		<p>Light status -- {{ lightSensorMessage }}</p>
-    	<p>Light sensor topic -- {{ lightSensorTopic }}</p>
+      <p>Light status -- {{ lightSensorMessage }}</p>
+      <p>Light sensor topic -- {{ lightSensorTopic }}</p>
     </q-card-main>
-    <q-card-separator style="height:2px"/>
+    <q-card-separator style="height:2px" />
     <!-- <q-card-actions>
       <q-btn flat round dense icon="event" />
       <q-btn flat label="5:30PM" />
@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       lightSensorMessage: "",
-	  lightSensorTopic: ""
+      lightSensorTopic: ""
     };
   },
   methods: {},
@@ -45,15 +45,15 @@ export default {
       let message = JSON.parse(data.data);
       self.lightSensorMessage = message.message;
       self.lightSensorTopic = message.topic;
-	});
+    });
 
-	ws.addEventListener("error", function() {
-		console.log("Socket error!");
-	});
+    ws.addEventListener("error", function() {
+      console.log("Socket error!");
+    });
 
     ws.addEventListener("close", function close() {
-	  console.log("Socket disconnected!");
-	  ws.send("Socket disconnected!");
+      console.log("Socket disconnected!");
+      ws.send("Socket disconnected!");
     });
   },
   props: {
@@ -63,5 +63,4 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

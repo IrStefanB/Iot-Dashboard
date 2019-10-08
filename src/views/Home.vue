@@ -7,15 +7,14 @@
   </q-page>
 </template>
 
-<style>
-</style>
+<style></style>
 
 <script>
-import LightSensor from "@/components/LightSensor.vue"; 
+import LightSensor from "@/components/LightSensor.vue";
 export default {
   name: "PageHome",
-  components: { 
-    LightSensor 
+  components: {
+    LightSensor
   }
 };
 </script>

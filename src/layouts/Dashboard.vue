@@ -25,13 +25,9 @@
     <q-layout-drawer
       v-model="leftDrawerOpen"
       :content-class="$q.theme === 'mat' ? 'bg-blue-grey-10' : null"
-      :content-style="{color: '#fff'}"
+      :content-style="{ color: '#fff' }"
     >
-      <q-list
-        no-border
-        link
-        inset-delimiter
-      >
+      <q-list no-border link inset-delimiter>
         <q-list no-border link inset-delimiter>
           <q-list-header>Navigation</q-list-header>
           <q-item to="/" exact>
@@ -90,6 +86,4 @@ export default {
 <style lang="stylus">
 // "variables" is a Webpack alias (provided out of the box by Quasar CLI)
 @import '~variables'
-
 </style>
-
